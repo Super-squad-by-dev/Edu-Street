@@ -13,10 +13,6 @@
     "username": "Admin",
     "password": "password789",
     "name": "You"
-  },
-  {
-    "username": "Trex",
-    "password": "123",
-    "name": "Dev"
   }
+
 ]
