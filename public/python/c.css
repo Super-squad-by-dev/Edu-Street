@@ -1,0 +1,136 @@
+/* CSS for the head section */
+head {
+  background-color: #333333;
+  color: #FFFFFF;
+}
+
+a {
+  background-color: thistle;
+  color: black;
+  text-decoration: none;
+}
+
+body{
+  background-color: #f2f2f2;
+}
+/* CSS for the header */
+#header {
+  padding: 20px;
+}
+
+/* CSS for the h1 tag */
+h1 {
+  font-family: Arial, sans-serif;
+  line-height: 1.5;
+}
+
+/* CSS for the h3 tag */
+h3 {
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  line-height: 0.1;
+}
+
+/* CSS for the iframe */
+iframe {
+  width: 854px;
+  height: 480px;
+}
+
+/* CSS for the button */
+.bubbly-button {
+  background-color: #3498db;
+  color: #fff;
+  border: none;
+  border-radius: 50px;
+  padding: 16px 32px;
+  font-size: 24px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  transition-duration: 0.4s;
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+}
+
+.bubbly-button:hover {
+  box-shadow: 0 5px 15px rgba(0,0,0,0.20);
+}
+
+.bubbly-button:before {
+  content: "";
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background-color: rgba(255, 255, 255, 0.5);
+  border-radius: 50%;
+  transform: scale(0);
+  transition: transform 0.6s ease-out;
+}
+
+.bubbly-button:hover:before {
+  transform: scale(1);
+}
+
+.bubbly-button:focus {
+  outline: none;
+}
+
+.bubbly-button:active:before {
+  transition: 0s;
+  transform: scale(0);
+}
+
+
+/* Style for the summary div */
+.summary {
+  background-color: #f1f1f1;
+  border: 1px solid #ccc;
+  padding: 10px;
+  margin-bottom: 20px;
+}
+
+/* Style for the h2 element */
+.summary h2 {
+  color: #006699;
+  font-size: 26px;
+  margin-top: 0;
+  margin-bottom: 10px;
+}
+
+/* Style for the p element */
+.summary p {
+  font-size: 18px;
+  line-height: 1.5;
+  margin-bottom: 10px;
+}
+
+/* Style for the ul element */
+.summary ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+/* Style for the li element */
+.summary li {
+  font-size: 18px;
+  line-height: 1.5;
+  margin-bottom: 5px;
+}
+
+/* Style for the a element */
+.summary a {
+  color: #006699;
+  text-decoration: none;
+  border-bottom: 1px solid #006699;
+}
+
+/* Hover style for the a element */
+.summary a:hover {
+  color: #004466;
+  border-bottom-color: #004466;
+}
+  

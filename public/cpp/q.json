@@ -1,0 +1,167 @@
+[
+    {
+        "Question": "What is C++?",
+        "wrongans": [
+            "A type of programming language",
+            "A web development framework",
+            "A database management system"
+        ],
+        "correctans": [
+            "A programming language"
+        ]
+    },
+    {
+        "Question": "Which of the following is not a valid data type in C++?",
+        "wrongans": [
+            "int",
+            "boolean",
+            "string"
+        ],
+        "correctans": [
+            "character"
+        ]
+    },
+    {
+        "Question": "What is the output of the following code? 'cout << 5 + 3;'",
+        "wrongans": [
+            "8",
+            "53",
+            "Error"
+        ],
+        "correctans": [
+            "8"
+        ]
+    },
+    {
+        "Question": "What is the purpose of the 'public' keyword in C++?",
+        "wrongans": [
+            "To declare a private method",
+            "To specify the return type of a method",
+            "To make a variable constant"
+        ],
+        "correctans": [
+            "To declare a public member"
+        ]
+    },
+    {
+        "Question": "Which keyword is used to create an object in C++?",
+        "wrongans": [
+            "new",
+            "create",
+            "initialize"
+        ],
+        "correctans": [
+            "new"
+        ]
+    },
+    {
+        "Question": "What is the result of the expression '5 % 2' in C++?",
+        "wrongans": [
+            "2",
+            "0",
+            "2.5"
+        ],
+        "correctans": [
+            "1"
+        ]
+    },
+    {
+        "Question": "Which of the following is used to implement conditional statements in C++?",
+        "wrongans": [
+            "loop",
+            "switch",
+            "class"
+        ],
+        "correctans": [
+            "if-else"
+        ]
+    },
+    {
+        "Question": "What is the output of the following code?\n\n```\nint x = 5;\ncout << x++;\n```",
+        "wrongans": [
+            "5",
+            "6",
+            "Error"
+        ],
+        "correctans": [
+            "5"
+        ]
+    },
+    {
+        "Question": "Which C++ keyword is used to define a constant?",
+        "wrongans": [
+            "var",
+            "final",
+            "const"
+        ],
+        "correctans": [
+            "const"
+        ]
+    },
+    {
+        "Question": "What is the output of the following code?\n\n```\nstring name;\ncout << name.length();\n```",
+        "wrongans": [
+            "0",
+            "Error",
+            "Random value"
+        ],
+        "correctans": [
+            "Random value"
+        ]
+    },
+    {
+        "Question": "What is the output of the following code?\n\n```\nint numbers[] = {1, 2, 3};\ncout << numbers[1];\n```",
+        "wrongans": [
+            "1",
+            "3",
+            "Error"
+        ],
+        "correctans": [
+            "2"
+        ]
+    },
+    {
+        "Question": "Which keyword is used to define a subclass in C++?",
+        "wrongans": [
+            "new",
+            "super",
+            "extend"
+        ],
+        "correctans": [
+            "class"
+        ]
+    },
+    {
+        "Question": "What is the result of the expression 'true && false' in C++?",
+        "wrongans": [
+            "true",
+            "false",
+            "Error"
+        ],
+        "correctans": [
+            "false"
+        ]
+    },
+    {
+        "Question": "Which of the following is used to read user input in C++?",
+        "wrongans": [
+            "cin",
+            "get",
+            "read"
+        ],
+        "correctans": [
+            "cin"
+        ]
+    },
+    {
+        "Question": "What is the output of the following code?\n\n```\nint x = 10;\ncout << (x > 5 ? 'A' : 'B');\n```",
+        "wrongans": [
+            "10",
+            "A",
+            "B"
+        ],
+        "correctans": [
+            "A"
+        ]
+    }
+]

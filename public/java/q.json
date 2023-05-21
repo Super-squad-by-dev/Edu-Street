@@ -1,0 +1,167 @@
+[
+    {
+        "Question": "What is Java?",
+        "wrongans": [
+            "A type of coffee",
+            "A programming language",
+            "A JavaScript library"
+        ],
+        "correctans": [
+            "A programming platform"
+        ]
+    },
+    {
+        "Question": "Which of the following is not a valid data type in Java?",
+        "wrongans": [
+            "int",
+            "boolean",
+            "string"
+        ],
+        "correctans": [
+            "string"
+        ]
+    },
+    {
+        "Question": "What is the output of the following code? 'System.out.println(5 + 3)'",
+        "wrongans": [
+            "8",
+            "53",
+            "Error"
+        ],
+        "correctans": [
+            "8"
+        ]
+    },
+    {
+        "Question": "What is the purpose of the 'public' keyword in Java?",
+        "wrongans": [
+            "To make a variable constant",
+            "To declare a private method",
+            "To specify the return type of a method"
+        ],
+        "correctans": [
+            "To declare a public method or class"
+        ]
+    },
+    {
+        "Question": "Which keyword is used to create an object in Java?",
+        "wrongans": [
+            "new",
+            "create",
+            "initialize"
+        ],
+        "correctans": [
+            "new"
+        ]
+    },
+    {
+        "Question": "What is the result of the expression '5 % 2' in Java?",
+        "wrongans": [
+            "2",
+            "0",
+            "2.5"
+        ],
+        "correctans": [
+            "1"
+        ]
+    },
+    {
+        "Question": "Which of the following is used to implement conditional statements in Java?",
+        "wrongans": [
+            "loop",
+            "switch",
+            "class"
+        ],
+        "correctans": [
+            "if-else"
+        ]
+    },
+    {
+        "Question": "What is the output of the following code?\n\n```\nint x = 5;\nSystem.out.println(x++);\n```",
+        "wrongans": [
+            "5",
+            "6",
+            "Error"
+        ],
+        "correctans": [
+            "5"
+        ]
+    },
+    {
+        "Question": "Which Java keyword is used to define a constant?",
+        "wrongans": [
+            "var",
+            "final",
+            "const"
+        ],
+        "correctans": [
+            "final"
+        ]
+    },
+    {
+        "Question": "What is the output of the following code?\n\n```\nString name = null;\nSystem.out.println(name.length());\n```",
+        "wrongans": [
+            "null",
+            "0",
+            "Error"
+        ],
+        "correctans": [
+            "Error"
+        ]
+    },
+    {
+        "Question": "What is the output of the following code?\n\n```\nint[] numbers = {1, 2, 3};\nSystem.out.println(numbers[1]);\n```",
+        "wrongans": [
+            "1",
+            "3",
+            "Error"
+        ],
+        "correctans": [
+            "2"
+        ]
+    },
+    {
+        "Question": "Which keyword is used to define a subclass in Java?",
+        "wrongans": [
+            "new",
+            "super",
+            "extend"
+        ],
+        "correctans": [
+            "extends"
+        ]
+    },
+    {
+        "Question": "What is the result of the expression 'true && false' in Java?",
+        "wrongans": [
+            "true",
+            "false",
+            "Error"
+        ],
+        "correctans": [
+            "false"
+        ]
+    },
+    {
+        "Question": "Which of the following is used to read user input in Java?",
+        "wrongans": [
+            "System.out",
+            "System.in",
+            "System.err"
+        ],
+        "correctans": [
+            "Scanner"
+        ]
+    },
+    {
+        "Question": "What is the output of the following code?\n\n```\nint x = 10;\nSystem.out.println(x > 5 ? 'A' : 'B');\n```",
+        "wrongans": [
+            "10",
+            "A",
+            "B"
+        ],
+        "correctans": [
+            "A"
+        ]
+    }
+]

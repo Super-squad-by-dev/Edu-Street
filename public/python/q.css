@@ -1,0 +1,80 @@
+
+head{
+    font-family: Arial, sans-serif;
+  }
+  
+  #header {
+    background-color: #3e3f41; /*change to the color of your choice*/
+    color: white;
+    text-align: left;
+    padding: 15px;
+  }
+  
+  body {
+    font-family: Arial, sans-serif;
+  }
+  
+  h1 {
+    text-align: center;
+    margin-top: 30px;
+  }
+  
+  #question {
+    font-size: 1.2em;
+    font-weight: bold;
+    margin: 30px 0;
+  }
+  
+  form {
+    margin: 0 auto;
+    max-width: 500px;
+  }
+  
+  label {
+    display: block;
+    margin-bottom: 10px;
+    font-size: 1.1em;
+  }
+  
+  input[type="radio"] {
+    margin-right: 10px;
+    margin-top: 2px;
+  }
+  
+  #submit-btn {
+    margin-top: 20px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 4px;
+  }
+  
+  #submit-btn:hover {
+    background-color: #3e8e41;
+  }
+  
+  #result {
+    font-size: 1.2em;
+    font-weight: bold;
+    margin-top: 30px;
+    text-align: center;
+  }
+  
+  .green {
+    color: green;
+  }
+  
+  .red {
+    color: red;
+  }
+  
+  .blue {
+    color: blue;
+  }
+  

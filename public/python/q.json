@@ -1,0 +1,97 @@
+[
+    {
+        "Question": "Which of the following is not a built-in data type in Python?",
+        "wrongans": ["int", "str", "float"],
+        "correctans": ["array"]
+    },
+    {
+        "Question": "What is Python?",
+        "wrongans": ["A snake", "A type of coffee", "A type of chai"],
+        "correctans": ["A programming language"]
+    },
+    {
+        "Question": "What is the output of the following code? 'x=5 print x'",
+        "wrongans": ["Error", "Error404", "%"],
+        "correctans": ["5"]
+    },
+    {
+        "Question": "Which of the following is used to store multiple items in a single variable in Python?",
+        "wrongans": ["Tuple", "Dictionary", "String"],
+        "correctans": ["List"]
+    },
+    {
+        "Question": "What is the result of the expression '3 + 2 * 4' in Python?",
+        "wrongans": ["20", "9", "12"],
+        "correctans": ["11"]
+    },
+    {
+        "Question": "Which keyword is used to define a function in Python?",
+        "wrongans": ["method", "def", "class"],
+        "correctans": ["def"]
+    },
+    {
+        "Question": "What is the output of the following code? 'print(len([1, 2, 3]))'",
+        "wrongans": ["1", "2", "3"],
+        "correctans": ["3"]
+    },
+    {
+        "Question": "What is the result of the expression 'True and False' in Python?",
+        "wrongans": ["True", "False", "Error"],
+        "correctans": ["False"]
+    },
+    {
+        "Question": "Which built-in function is used to sort a list in Python?",
+        "wrongans": ["size", "length", "order"],
+        "correctans": ["sorted"]
+    },
+    {
+        "Question": "What is the output of the following code? 'print(type('Hello'))'",
+        "wrongans": ["integer", "float", "boolean"],
+        "correctans": ["str"]
+    },
+    {
+        "Question": "Which of the following is not a comparison operator in Python?",
+        "wrongans": ["==", ">=", "<>", "<="],
+        "correctans": ["&"]
+    },
+    {
+        "Question": "What is the output of the following code? 'print('Hello' + 'World')'",
+        "wrongans": ["Hello", "World", "Hello World"],
+        "correctans": ["HelloWorld"]
+    },
+    {
+        "Question": "What is the result of the expression '10 / 3' in Python?",
+        "wrongans": ["3.333", "3", "3.0"],
+        "correctans": ["3.3333333333333335"]
+    },
+    {
+        "Question": "Which built-in function is used to determine the length of a string in Python?",
+        "wrongans": ["count", "size", "length"],
+        "correctans": ["len"]
+    },
+    {
+        "Question": "What is the result of the expression 'bool(0)' in Python?",
+        "wrongans": ["True", "False", "Error"],
+        "correctans": ["False"]
+    },
+    {
+        "Question": "What is the output of the following code? 'print('Python'[1:4])'",
+        "wrongans": ["P", "Pyt", "yth"],
+        "correctans": ["yth"]
+    },
+    {
+        "Question": "Which of the following is used to repeat a sequence in Python?",
+        "wrongans": ["for loop", "while loop", "if statement"],
+        "correctans": ["for loop"]
+    },
+    {
+        "Question": "What is the output of the following code? 'print(2 ** 3)'",
+        "wrongans": ["8", "6", "2"],
+        "correctans": ["8"]
+    },
+    {
+        "Question": "Which method is used to remove an item from a list in Python?",
+        "wrongans": [".add()", ".pop()", ".remove()"],
+        "correctans": [".remove()"]
+    }
+]

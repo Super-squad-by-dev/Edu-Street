@@ -1,0 +1,23 @@
+[
+  {
+    "id": 1,
+    "title": "Python 101",
+    "image": "python.png",
+    "link": "python/c.html",
+    "Author": "Mosh Hamedani"
+  },
+  {
+    "id": 2,
+    "title": "Java 101",
+    "image": "java101.jpg",
+    "link": "java/c.html",
+    "Author": "Mosh Hamedani"
+  },
+  {
+    "id": 3,
+    "title": "C# 101",
+    "image": "cs.jpg",
+    "link": "cs/c.html",
+    "Author": "Mosh Hamedani"
+  }
+]
