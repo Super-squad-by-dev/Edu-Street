@@ -46,7 +46,7 @@ app.get('/register', (req, res) => {
   res.sendFile(path.join(__dirname, 'public', 'register.html'));
 });
 
-  
+
 app.get('/register.js', (req, res) => {
   res.sendFile(path.join(__dirname, 'public', 'register.js'));
 });
@@ -54,4 +54,21 @@ app.get('/register.js', (req, res) => {
 
 app.listen(3000, () => {
   console.log('Server is running on port 3000');
+});
+
+app.get('/users', (req, res) => {
+  const usersPath = path.join(__dirname, 'public', 'users.json');
+  const usersData = fs.readFileSync(usersPath, 'utf8');
+  const users = JSON.parse(usersData);
+  res.json(users);
+});
+
+app.delete('/users/:username', (req, res) => {
+  const username = req.params.username;
+  const usersPath = path.join(__dirname, 'public', 'users.json');
+  const usersData = fs.readFileSync(usersPath, 'utf8');
+  let users = JSON.parse(usersData);
+  const updatedUsers = users.filter(user => user.username !== username);
+  fs.writeFileSync(usersPath, JSON.stringify(updatedUsers, null, 2));
+  res.sendStatus(200);
 });
