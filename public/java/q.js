@@ -1,22 +1,22 @@
-// Load the questions from python_q.json
+
 fetch("q.json")
   .then(response => response.json())
   .then(questions => {
-    // Shuffle the questions array
+
     questions.sort(() => Math.random() - 0.5);
 
-    // Shuffle the answers for each question
+
     for (const question of questions) {
       question.answers = question.wrongans.concat(question.correctans);
       question.answers.sort(() => Math.random() - 0.5);
     }
 
-    // Display the first question
+
     let i = 0;
     let j = 0;
     displayQuestion(i);
 
-    // Handle form submission
+
     const form = document.querySelector("form");
     form.addEventListener("submit", event => {
       event.preventDefault();
@@ -47,7 +47,7 @@ fetch("q.json")
       }
     });
 
-    // Display a question
+
     function displayQuestion(i) {
       const questionDiv = document.querySelector("#question");
       const optionsDiv = document.querySelector("#options");

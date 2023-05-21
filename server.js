@@ -46,12 +46,12 @@ app.get('/register', (req, res) => {
   res.sendFile(path.join(__dirname, 'public', 'register.html'));
 });
 
-// Serve register.js
+  
 app.get('/register.js', (req, res) => {
   res.sendFile(path.join(__dirname, 'public', 'register.js'));
 });
 
-// Start the server
+
 app.listen(3000, () => {
   console.log('Server is running on port 3000');
 });

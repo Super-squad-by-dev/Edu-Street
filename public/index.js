@@ -11,7 +11,7 @@ loginForm.addEventListener('submit', (e) => {
     .then(users => {
       const user = users.find(user => user.username === username && user.password === password);
       if (user) {
-        localStorage.setItem('username', username); // Store the username in localStorage
+        localStorage.setItem('username', username); 
         window.location.replace('/home.html');
       } else {
         alert('Invalid username or password');

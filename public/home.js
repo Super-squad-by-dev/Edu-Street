@@ -9,10 +9,10 @@ if (username) {
   }else{
     welcome.textContent = `Welcome, ${username}!`;
   }
-  // Display welcome message to the user
+
   
 } else {
-  // Redirect the user to the login page if username is not found in localStorage
+
   window.location.replace('/login.html');
 }
 
@@ -28,7 +28,7 @@ fetch("courses.json")
       img.src = course.image;
       img.alt = course.title;
 
-      if (course.availableFor && course.availableFor.includes(username)) { // Customize display for the logged-in user
+      if (course.availableFor && course.availableFor.includes(username)) { 
         img.style.width = "300%";
         img.style.height = "auto";
       } else {
