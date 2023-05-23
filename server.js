@@ -9,7 +9,6 @@ app.use(express.static('public'));
 app.use(bodyParser.json());
 
 
-
 app.get('/courses', (req, res) => {
   const coursesPath = path.join(__dirname, 'public', 'courses.json');
   const coursesData = fs.readFileSync(coursesPath, 'utf8');
@@ -38,14 +37,10 @@ app.post('/register', (req, res) => {
   };
   users.push(newUser);
   fs.writeFileSync(usersPath, JSON.stringify(users, null, 2));
-  
-  // Log user IP address
-  const userIP = req.ip;
-  console.log(`User IP address: ${userIP}`);
-  
-  console.log(newUser);
   res.sendStatus(200);
+
 });
+
 app.get('/register', (req, res) => {
   res.sendFile(path.join(__dirname, 'public', 'register.html'));
 });
