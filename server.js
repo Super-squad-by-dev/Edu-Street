@@ -10,7 +10,7 @@ app.use(bodyParser.json());
 
 app.get('/get-ip', (req, res) => {
   const userIP = req.ip;
-  uip = (`Your IP address is: ${userIP}`);
+  res.send(`Your IP address is: ${userIP}`);
 });
 
 app.get('/courses', (req, res) => {
