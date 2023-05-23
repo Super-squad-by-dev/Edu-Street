@@ -8,10 +8,7 @@ let uip = "";
 app.use(express.static('public'));
 app.use(bodyParser.json());
 
-app.get('/get-ip', (req, res) => {
-  const userIP = req.ip;
-  res.send(`Your IP address is: ${userIP}`);
-});
+
 
 app.get('/courses', (req, res) => {
   const coursesPath = path.join(__dirname, 'public', 'courses.json');
@@ -41,11 +38,14 @@ app.post('/register', (req, res) => {
   };
   users.push(newUser);
   fs.writeFileSync(usersPath, JSON.stringify(users, null, 2));
-  res.sendStatus(200);
+  
+  // Log user IP address
+  const userIP = req.ip;
+  console.log(`User IP address: ${userIP}`);
+  
   console.log(newUser);
-  console.log(uip);
+  res.sendStatus(200);
 });
-
 app.get('/register', (req, res) => {
   res.sendFile(path.join(__dirname, 'public', 'register.html'));
 });
