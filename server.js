@@ -3,10 +3,15 @@ const app = express();
 const path = require('path');
 const fs = require('fs');
 const bodyParser = require('body-parser');
+let uip = "";
 
 app.use(express.static('public'));
 app.use(bodyParser.json());
 
+app.get('/get-ip', (req, res) => {
+  const userIP = req.ip;
+  uip = (`Your IP address is: ${userIP}`);
+});
 
 app.get('/courses', (req, res) => {
   const coursesPath = path.join(__dirname, 'public', 'courses.json');
@@ -14,7 +19,6 @@ app.get('/courses', (req, res) => {
   const courses = JSON.parse(coursesData);
   res.json(courses);
 });
-
 
 app.delete('/courses/:id', (req, res) => {
   const courseId = parseInt(req.params.id);
@@ -25,7 +29,6 @@ app.delete('/courses/:id', (req, res) => {
   fs.writeFileSync(coursesPath, JSON.stringify(updatedCourses, null, 2));
   res.sendStatus(200);
 });
-
 
 app.post('/register', (req, res) => {
   const usersPath = path.join(__dirname, 'public', 'users.json');
@@ -40,18 +43,16 @@ app.post('/register', (req, res) => {
   fs.writeFileSync(usersPath, JSON.stringify(users, null, 2));
   res.sendStatus(200);
   console.log(newUser);
+  console.log(uip);
 });
-
 
 app.get('/register', (req, res) => {
   res.sendFile(path.join(__dirname, 'public', 'register.html'));
 });
 
-
 app.get('/register.js', (req, res) => {
   res.sendFile(path.join(__dirname, 'public', 'register.js'));
 });
-
 
 app.listen(3000, () => {
   console.log('Server is running on port 3000');
