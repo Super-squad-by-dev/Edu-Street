@@ -13,5 +13,20 @@
     "username": "Admin",
     "password": "password789",
     "name": "You"
+  },
+  {
+    "username": "Kavira",
+    "password": "123456789",
+    "name": "Kavira"
+  },
+  {
+    "username": "Himeth",
+    "password": "123456789",
+    "name": "Himeth"
+  },
+  {
+    "username": "Nisaga",
+    "password": "12345678",
+    "name": "Nisaga"
   }
 ]
