@@ -1,21 +1,18 @@
+const course = "C++ 101 course";
 
 fetch("q.json")
   .then(response => response.json())
   .then(questions => {
-
     questions.sort(() => Math.random() - 0.5);
-
 
     for (const question of questions) {
       question.answers = question.wrongans.concat(question.correctans);
       question.answers.sort(() => Math.random() - 0.5);
     }
 
-
     let i = 0;
     let j = 0;
     displayQuestion(i);
-
 
     const form = document.querySelector("form");
     form.addEventListener("submit", event => {
@@ -35,6 +32,10 @@ fetch("q.json")
           displayQuestion(i);
         } else {
           displayResult(`You got ${j} out of ${questions.length} questions correct!`, "blue");
+          setTimeout(() => {
+            localStorage.setItem("course", course);
+            window.location.href = "../certificates/certificate.html";
+          }, 2000);
         }
       } else {
         displayResult("Incorrect. The correct answer is " + correctAnswers.join(", ") + ".", "red");
@@ -43,10 +44,19 @@ fetch("q.json")
           displayQuestion(i);
         } else {
           displayResult(`You got ${j} out of ${questions.length} questions correct!`, "blue");
+          if(j>10){
+            setTimeout(() => {
+              window.location.href = "../certificates/certificate.html";
+            }, 2000);
+          }
+          else{
+            setTimeout(() => {
+              displayResult(`you got less than 10 questions correct so you want get a certificate`, "blue");
+            }, 2000);
+          }
         }
       }
     });
-
 
     function displayQuestion(i) {
       const questionDiv = document.querySelector("#question");
@@ -68,7 +78,6 @@ fetch("q.json")
       }
     }
 
-    // Display a result message
     function displayResult(message, color) {
       const resultDiv = document.querySelector("#result");
       resultDiv.textContent = message;

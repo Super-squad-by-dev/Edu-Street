@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Certificate of Completion</title>
+  <style>
+
+    body {
+      font-family: Arial, sans-serif;
+      text-align: center;
+    }
+    
+    .certificate {
+      border: 2px solid #000;
+      padding: 20px;
+      max-width: 600px;
+      margin: 0 auto;
+    }
+    
+    .certificate h1 {
+      font-size: 24px;
+      margin-bottom: 20px;
+    }
+    
+    .certificate p {
+      font-size: 18px;
+      margin-bottom: 10px;
+    }
+    
+    .certificate .user-name {
+      font-weight: bold;
+    }
+    
+    .certificate .course-name {
+      font-style: italic;
+    }
+  </style>
+</head>
+<body>
+  <div class="certificate">
+    <h1>Certificate of Completion</h1>
+    <p>This certifies that</p>
+    <p id="user-name" class="user-name">[User's Name]</p>
+    <p>has successfully completed the course</p>
+    <p id="course-name" class="course-name">[Course Name]</p>
+  </div>
+  <script>
+
+    var course = localStorage.getItem("course");
+    var name = localStorage.getItem("username");
+
+    var courseNameElement = document.getElementById("course-name");
+    var userNameElement = document.getElementById("user-name");
+
+    courseNameElement.textContent = course;
+    userNameElement.textContent = name;
+  </script>
+</body>
+</html>

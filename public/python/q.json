@@ -31,8 +31,8 @@
     },
     {
         "Question": "What is the output of the following code? 'print(len([1, 2, 3]))'",
-        "wrongans": ["1", "2", "3"],
-        "correctans": ["3"]
+        "wrongans": ["1", "2" ],
+        "correctans": ["3","3"]
     },
     {
         "Question": "What is the result of the expression 'True and False' in Python?",
@@ -88,6 +88,11 @@
         "Question": "What is the output of the following code? 'print(2 ** 3)'",
         "wrongans": ["8", "6", "2"],
         "correctans": ["8"]
+    },
+    {
+        "Question": "Which method is used to remove an item from a list in Python?",
+        "wrongans": [".add()", ".pop()", ".remove()"],
+        "correctans": [".remove()"]
     },
     {
         "Question": "Which method is used to remove an item from a list in Python?",
