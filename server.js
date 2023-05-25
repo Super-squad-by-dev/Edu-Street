@@ -55,3 +55,10 @@ app.get('/register.js', (req, res) => {
 app.listen(3000, () => {
   console.log('Server is running on port 3000');
 });
+
+app.get('/users', (req, res) => {
+  const usersPath = path.join(__dirname, 'public', 'users.json');
+  const usersData = fs.readFileSync(usersPath, 'utf8');
+  const users = JSON.parse(usersData);
+  res.json(users);
+});

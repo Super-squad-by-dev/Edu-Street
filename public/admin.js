@@ -33,7 +33,7 @@ fetch('/courses')
     console.error('Error:', error);
   });
 
-fetch('/users')
+  fetch('/users')
   .then(response => response.json())
   .then(data => {
     const tableBody = document.querySelector('#userTable tbody');
@@ -65,6 +65,23 @@ fetch('/users')
     console.error('Error:', error);
   });
 
+function deleteUser(username, row) {
+  fetch(`/users/${username}`, {
+    method: 'DELETE'
+  })
+    .then(response => {
+      if (response.ok) {
+        row.remove();
+        console.log('User deleted successfully!');
+      } else {
+        console.log('Error deleting user.');
+      }
+    })
+    .catch(error => {
+      console.error('Error:', error);
+    });
+}
+
 function deleteCourse(courseId, row) {
   fetch(`/courses/${courseId}`, {
     method: 'DELETE'
@@ -82,19 +99,3 @@ function deleteCourse(courseId, row) {
     });
 }
 
-function deleteUser(username, row) {
-  fetch(`/users/${username}`, {
-    method: 'DELETE'
-  })
-    .then(response => {
-      if (response.ok) {
-        row.remove();
-        console.log('User deleted successfully!');
-      } else {
-        console.log('Error deleting user.');
-      }
-    })
-    .catch(error => {
-      console.error('Error:', error);
-    });
-}
