@@ -13,7 +13,7 @@ fetch('/courses')
 
       idCell.textContent = course.id;
       titleCell.textContent = course.title;
-      authorCell.textContent = course.Author;
+      authorCell.textContent = course.author;
       deleteButton.textContent = 'Delete';
 
       deleteButton.addEventListener('click', function() {
@@ -33,7 +33,7 @@ fetch('/courses')
     console.error('Error:', error);
   });
 
-  fetch('/users')
+fetch('/users')
   .then(response => response.json())
   .then(data => {
     const tableBody = document.querySelector('#userTable tbody');
@@ -98,4 +98,3 @@ function deleteCourse(courseId, row) {
       console.error('Error:', error);
     });
 }
-
