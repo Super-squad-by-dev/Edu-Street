@@ -66,4 +66,3 @@ app.delete('/users/:username', (req, res) => {
   fs.writeFileSync(usersPath, JSON.stringify(updatedUsers, null, 2));
   res.sendStatus(200);
 });
-console.log("server ran success fully")
