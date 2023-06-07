@@ -46,7 +46,7 @@ fetch("q.json")
           displayResult(`You got ${j} out of ${questions.length} questions correct!`, "blue");
           if(j>10){
             setTimeout(() => {
-              window.location.href = "../certificates/certificate.html";
+              window.location.href = "../certificates/display.html";
             }, 2000);
           }
           else{

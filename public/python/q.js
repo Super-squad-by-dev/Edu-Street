@@ -34,7 +34,7 @@ fetch("q.json")
           displayResult(`You got ${j} out of ${questions.length} questions correct!`, "blue");
           setTimeout(() => {
             localStorage.setItem("course", course);
-            window.location.href = "../certificates/certificate.html";
+            window.location.href = "../certificates/display.html";
           }, 2000);
         }
       } else {
