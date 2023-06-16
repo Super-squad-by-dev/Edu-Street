@@ -3,9 +3,38 @@ const app = express();
 const path = require('path');
 const fs = require('fs');
 const bodyParser = require('body-parser');
+const jsdom = require('jsdom');
+const { JSDOM } = jsdom;
+const { createCanvas, loadImage } = require('canvas');
+const jsPDF = require('jspdf');
 
 app.use(express.static('public'));
 app.use(bodyParser.json());
+
+app.get('/convert', async (req, res) => {
+  const { html } = req.query;
+
+  const dom = new JSDOM(html);
+  const { document } = dom.window;
+
+  const canvas = createCanvas(document.documentElement.scrollWidth, document.documentElement.scrollHeight);
+  const context = canvas.getContext('2d');
+
+  const svgData = new XMLSerializer().serializeToString(document);
+
+  const image = await loadImage('data:image/svg+xml;charset=utf-8,' + encodeURIComponent(svgData));
+
+  context.drawImage(image, 0, 0);
+
+  const dataURL = canvas.toDataURL('image/png');
+
+  const pdf = new jsPDF();
+  pdf.addImage(dataURL, 'PNG', 0, 0);
+
+  const pdfData = pdf.output();
+  res.contentType('application/pdf');
+  res.send(pdfData);
+});
 
 app.get('/courses', (req, res) => {
   const coursesPath = path.join(__dirname, 'public', 'courses.json');
@@ -46,10 +75,6 @@ app.get('/register.js', (req, res) => {
   res.sendFile(path.join(__dirname, 'public', 'register.js'));
 });
 
-app.listen(3000, () => {
-  console.log('Server is running on port 3000');
-});
-
 app.get('/users', (req, res) => {
   const usersPath = path.join(__dirname, 'public', 'users.json');
   const usersData = fs.readFileSync(usersPath, 'utf8');
@@ -66,4 +91,9 @@ app.delete('/users/:username', (req, res) => {
   fs.writeFileSync(usersPath, JSON.stringify(updatedUsers, null, 2));
   res.sendStatus(200);
 });
-console.log("server ran success fully")
+
+app.listen(3000, () => {
+  console.log('Server is running on port 3000');
+});
+
+

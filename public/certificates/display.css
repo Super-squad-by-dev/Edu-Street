@@ -1,119 +1,126 @@
 head{
     font-family: Arial, sans-serif;
   }
+
+#header {
+  background-color: #1E90FF; /*change to the color of your choice*/
+  color: white;
+  text-align: left;
+  padding: 15px;
+}
+#logout{
   
-  #header {
-    background-color: #1E90FF; /*change to the color of your choice*/
-    color: white;
-    text-align: left;
-    padding: 15px;
-  }
-  #logout{
-    
-    background-color: #dbd834;
-    color: #fff;
-    border: none;
-    border-radius: 50px;
-    padding: 16px 32px;
-    font-size: 24px;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    transition-duration: 0.4s;
-    cursor: pointer;
-    position: relative;
-    overflow: hidden;
-  }
-  .donate{
-  
-      background-color: #34db4a;
-      color: #fff;
-      border: none;
-      border-radius: 50px;
-      padding: 16px 32px;
-      font-size: 24px;
-      text-align: center;
-      text-decoration: none;
-      display: inline-block;
-      transition-duration: 0.4s;
-      cursor: pointer;
-      position: relative;
-      overflow: hidden;
-  }
-  body {
-    font-family: 'Courier New', monospace;
-    margin: 0;
-    background-color: #f2f2f2;
-  }
-  
-  #header {
-    background-color: #333;
-    color: white;
-    text-align: center;
-    padding: 15px;
-  }
-  
-  #header h1 {
-    margin: 0;
-  }
-  
-  #container {
-    margin: 0 auto;
-    max-width: 960px;
-    padding: 10px;
-  }
-  
-  #course-list {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    list-style-type: none;
-    padding: 0;
-    margin: 0;
-  }
-  
+  background-color: #dbd834;
+  color: #fff;
+  border: none;
+  border-radius: 50px;
+  padding: 16px 32px;
+  font-size: 24px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  transition-duration: 0.4s;
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+}
+
+body {
+  font-family: 'Courier New', monospace;
+  margin: 0;
+  background-color: #f2f2f2;
+}
+
+#header {
+  background-color: #333;
+  color: white;
+  text-align: center;
+  padding: 15px;
+}
+
+#header h1 {
+  margin: 0;
+}
+
+#container {
+  margin: 0 auto;
+  max-width: 960px;
+  padding: 10px;
+}
+
+#course-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+#course-list li {
+  margin: 10px;
+  border: 0.5 px solid #ddd;
+  box-shadow: 0px 2px 5px #ddd;
+  overflow: hidden;
+}
+
+#course-list li a {
+  display: block;
+  text-decoration: none;
+}
+
+#course-list li img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+@media screen and (min-width: 768px) {
   #course-list li {
-    margin: 10px;
-    border: 0.5 px solid #ddd;
-    box-shadow: 0px 2px 5px #ddd;
-    overflow: hidden;
+    flex: 0 0 calc(33.333% - 20px);
   }
-  
-  #course-list li a {
-    display: block;
-    text-decoration: none;
-  }
-  
-  #course-list li img {
-    display: block;
-    width: 100%;
-    height: auto;
-  }
-  
-  @media screen and (min-width: 768px) {
-    #course-list li {
-      flex: 0 0 calc(33.333% - 20px);
-    }
-  }
-  
-  .container {
-    position: relative;
-    height: 300px; /* set the height of the container */
-  }
-  
-  h5 {
-    position: absolute;
-    bottom: 0;
-    right: 0;
-  }
-  .iframe-container {
-    width: 50%;
-    height: 50vh; /* Set the container height to 100% of the viewport height */
-  }
-  
-  .iframe-container iframe {
-    width: 100%;
-    height: 100%; /* Set the iframe height to occupy the full container */
-    border: none; /* Optional: remove iframe border */
-  }
-  
+}
+
+.container {
+  position: relative;
+  height: 300px; /* set the height of the container */
+}
+
+h5 {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+}
+.iframe-container {
+  width: 100%;
+  height: 170vh; /* Set the container height to 100% of the viewport height */
+}
+
+.iframe-container iframe {
+  width: 100%;
+  height: 100%; /* Set the iframe height to occupy the full container */
+  border: none; /* Optional: remove iframe border */
+}
+
+.round-button {
+  display: inline-block;
+  border-radius: 50%;
+  background-color: #1E90FF; /* Set the background color of the button */
+  color: white; /* Set the text color */
+  font-family: Arial, sans-serif;
+  font-size: 16px;
+  padding: 10px 20px;
+  border: none;
+  text-align: center;
+  text-decoration: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.round-button:hover {
+  background-color: #1E90FF; /* Set the background color of the button on hover */
+}
+
+.round-button:active {
+  background-color: #1565C0; /* Set the background color of the button when pressed */
+}
