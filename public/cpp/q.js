@@ -37,7 +37,7 @@ fetch("q.json")
               localStorage.setItem("course", course);
               window.location.href = "../certificates/display.html";
             }else{
-              displayResult(`You got ${j*5}% and you need more than ${15*5}% to pass`, "red");
+              displayResult(`You got ${j*5}% and you need more than ${10*5}% to pass`, "red");
             }
           }, 2000);
         }
