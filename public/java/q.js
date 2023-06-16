@@ -31,10 +31,14 @@ fetch("q.json")
         if (i < questions.length) {
           displayQuestion(i);
         } else {
-          displayResult(`You got ${j} out of ${questions.length} questions correct!`, "blue");
+          displayResult(`You got ${j*5}% out of ${questions.length} questions correct!`, "blue");
           setTimeout(() => {
-            localStorage.setItem("course", course);
-            window.location.href = "../certificates/certificate.html";
+            if (j>15){
+              localStorage.setItem("course", course);
+              window.location.href = "../certificates/display.html";
+            }else{
+              displayResult(`You got ${j*5}% and you need more than ${15*5}% to pass`, "red");
+            }
           }, 2000);
         }
       } else {
@@ -43,15 +47,15 @@ fetch("q.json")
         if (i < questions.length) {
           displayQuestion(i);
         } else {
-          displayResult(`You got ${j} out of ${questions.length} questions correct!`, "blue");
+          displayResult(`You got ${j*5}% out of 100% questions correct!`, "blue");
           if(j>10){
             setTimeout(() => {
-              window.location.href = "../certificates/display.html";
+              window.location.href = "../certificates/certificate.html";
             }, 2000);
           }
           else{
             setTimeout(() => {
-              displayResult(`you got less than 10 questions correct so you want get a certificate`, "blue");
+              displayResult(`You got ${j*5}% and you need more than ${15*5}% to pass`, "red");
             }, 2000);
           }
         }
