@@ -11,30 +11,6 @@ const jsPDF = require('jspdf');
 app.use(express.static('public'));
 app.use(bodyParser.json());
 
-app.get('/convert', async (req, res) => {
-  const { html } = req.query;
-
-  const dom = new JSDOM(html);
-  const { document } = dom.window;
-
-  const canvas = createCanvas(document.documentElement.scrollWidth, document.documentElement.scrollHeight);
-  const context = canvas.getContext('2d');
-
-  const svgData = new XMLSerializer().serializeToString(document);
-
-  const image = await loadImage('data:image/svg+xml;charset=utf-8,' + encodeURIComponent(svgData));
-
-  context.drawImage(image, 0, 0);
-
-  const dataURL = canvas.toDataURL('image/png');
-
-  const pdf = new jsPDF();
-  pdf.addImage(dataURL, 'PNG', 0, 0);
-
-  const pdfData = pdf.output();
-  res.contentType('application/pdf');
-  res.send(pdfData);
-});
 
 app.get('/courses', (req, res) => {
   const coursesPath = path.join(__dirname, 'public', 'courses.json');
